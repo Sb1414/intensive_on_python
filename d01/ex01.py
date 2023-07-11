@@ -45,3 +45,17 @@ purse3 = {"gold_ingots": 1}
 
 result = split_booty(purse1, purse2, purse3)
 print(result)
+
+def test_split_booty():
+    purse1 = {"gold_ingots": 3}
+    purse2 = {"gold_ingots": 2}
+    purse3 = {"gold_ingots": 1}
+
+    result = split_booty(purse1, purse2, purse3)
+    expected = ({"gold_ingots": 2}, {"gold_ingots": 2}, {"gold_ingots": 1})
+    assert result == expected, "False"
+
+
+if __name__ == "__main__":
+    test_split_booty()
+    print("Тесты пройдены")
