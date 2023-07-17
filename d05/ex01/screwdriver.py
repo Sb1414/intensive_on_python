@@ -15,7 +15,7 @@ def upload(file_path):
 
 
 def list_files():
-    url = f'{BASE_URL}/'
+    url = f'{BASE_URL}/files'
     response = requests.get(url)
     if response.status_code == 200:
         files = response.json()

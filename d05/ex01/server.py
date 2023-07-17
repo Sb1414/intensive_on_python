@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 
 app = Flask(__name__)
 app.secret_key = 'secret_key'
@@ -39,6 +39,12 @@ def upload():
 
     flash('Non-audio file detected')
     return redirect(request.url)
+
+
+@app.route('/files', methods=['GET'])
+def get_files():
+    files = os.listdir(app.config['UPLOAD_FOLDER'])
+    return jsonify(files)
 
 
 if __name__ == '__main__':
