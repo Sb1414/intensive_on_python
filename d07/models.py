@@ -2,6 +2,10 @@ import random
 import json
 
 
+def is_replicant(score, threshold_score=30):
+    return score > threshold_score
+
+
 class VariableMeasurements:
     def __init__(self, respiration, heart_rate, blushing_level, pupillary_dilation):
         self.respiration = respiration
