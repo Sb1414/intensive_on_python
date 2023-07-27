@@ -1,0 +1,15 @@
+import calculator
+
+print(calculator.add(14, 21))
+print(calculator.sub(14, 21))
+print(calculator.mul(14, 21))
+print(calculator.div(14, 7))
+print()
+print("bonus")
+print(calculator.add(14, 8.5))
+print(calculator.sub(14.4, 21))
+print(calculator.mul(14.5, 21))
+print(calculator.div(15, 2.5))
+print()
+# print("test for divide by zero")
+# print(calculator.div(14, 0))
